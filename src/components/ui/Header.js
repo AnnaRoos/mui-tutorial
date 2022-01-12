@@ -21,16 +21,17 @@ function ElevationScroll(props) {
 
 const ToolbarMargin = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar,
+  marginBottom: '3em',
 }));
 
 const Logo = styled('img')(({ theme }) => ({
-  height: '56px',
-  [theme.breakpoints.up('sx')]: {
+  height: '7em',
+  /*   [theme.breakpoints.up('sx')]: {
     height: '48px',
   },
   [theme.breakpoints.up('md')]: {
     height: '64px',
-  },
+  }, */
 }));
 
 const Header = () => {
