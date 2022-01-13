@@ -1,34 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
+import { pages } from '../../config/pageConfig';
 import { theme } from './Theme';
 
-const Navigation = () => {
-  const [value, setValue] = useState(0);
+const Navigation = ({ navigationHandler, value }) => {
+  const pageTabs = pages.slice(0, 5);
 
-  const tabChangeHandler = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  const NavigationTabs = [
-    'Home',
-    'Services',
-    'The Revolution',
-    'About Us',
-    'Contact Us',
-  ].map((tab, index) => {
+  const navigationTabs = pageTabs.map((page) => {
     return (
       <Tab
-        label={tab}
-        key={tab}
+        label={page.title}
+        key={page.title}
+        component={Link}
+        to={page.path}
         sx={{
           ...theme.typography.tab,
           minWidth: 10,
           marginLeft: '25px',
           '&.Mui-selected': {
             borderBottom: '3px solid white',
+            color: 'white',
           },
         }}
       />
@@ -38,11 +33,11 @@ const Navigation = () => {
   return (
     <Tabs
       value={value}
-      onChange={tabChangeHandler}
-      textColor="white"
+      onChange={navigationHandler}
+      textColor="inherit"
       sx={{ marginLeft: 'auto' }}
     >
-      {NavigationTabs}
+      {navigationTabs}
     </Tabs>
   );
 };

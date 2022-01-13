@@ -1,3 +1,4 @@
+import { grey } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 
 const arcBlue = '#0B72B9';
@@ -22,12 +23,13 @@ export const theme = createTheme({
       fontSize: '1rem',
       fontWeight: 700,
       textTransform: 'none',
+      color: grey[300],
     },
     estimate: {
       fontFamily: 'Pacifico',
       fontSize: '1rem',
       textTransform: 'none',
-      color: 'white',
+      color: 'black',
     },
   },
 });

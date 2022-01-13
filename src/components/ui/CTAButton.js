@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import { theme } from './Theme';
 
-const CallToActionButton = ({ position }) => {
+const CTAButton = ({ position }) => {
   return (
     <Button
       variant="contained"
@@ -13,6 +13,7 @@ const CallToActionButton = ({ position }) => {
         ...position,
         borderRadius: '50px',
         height: '45px',
+        minWidth: '150px',
       }}
     >
       Free Estimate
@@ -20,4 +21,4 @@ const CallToActionButton = ({ position }) => {
   );
 };
 
-export default CallToActionButton;
+export default CTAButton;
