@@ -17,8 +17,21 @@ export const theme = createTheme({
     },
   },
   typography: {
-    h3: {
-      fontWeight: 300,
+    tab: {
+      fontFamily: 'Raleway',
+      fontSize: '1rem',
+      fontWeight: 700,
+      textTransform: 'none',
+      color: 'white',
+    },
+  },
+  components: {
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          marginLeft: 'auto',
+        },
+      },
     },
   },
 });

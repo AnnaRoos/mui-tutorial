@@ -2,6 +2,9 @@ import React from 'react';
 
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
+
+import Navigation from './Navigation';
+
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { styled } from '@mui/system';
 
@@ -24,15 +27,15 @@ const ToolbarMargin = styled('div')(({ theme }) => ({
   marginBottom: '3em',
 }));
 
-const Logo = styled('img')(({ theme }) => ({
+/* const Logo = styled('img')(({ theme }) => ({
   height: '7em',
-  /*   [theme.breakpoints.up('sx')]: {
+    [theme.breakpoints.up('sx')]: {
     height: '48px',
   },
   [theme.breakpoints.up('md')]: {
     height: '64px',
-  }, */
-}));
+  }, 
+}));  */
 
 const Header = () => {
   return (
@@ -40,7 +43,12 @@ const Header = () => {
       <ElevationScroll>
         <AppBar>
           <Toolbar disableGutters>
-            <Logo src={logo} alt="Arc Development company logo" />
+            <img
+              src={logo}
+              alt="Arc Development company logo"
+              style={{ height: '7em' }}
+            />
+            <Navigation />
           </Toolbar>
         </AppBar>
       </ElevationScroll>
