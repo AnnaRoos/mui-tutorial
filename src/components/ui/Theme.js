@@ -22,16 +22,12 @@ export const theme = createTheme({
       fontSize: '1rem',
       fontWeight: 700,
       textTransform: 'none',
-      color: 'white',
     },
-  },
-  components: {
-    MuiTabs: {
-      styleOverrides: {
-        root: {
-          marginLeft: 'auto',
-        },
-      },
+    estimate: {
+      fontFamily: 'Pacifico',
+      fontSize: '1rem',
+      textTransform: 'none',
+      color: 'white',
     },
   },
 });

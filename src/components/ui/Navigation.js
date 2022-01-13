@@ -23,14 +23,12 @@ const Navigation = () => {
       <Tab
         label={tab}
         key={tab}
-        value={index}
         sx={{
           ...theme.typography.tab,
-          color: theme.palette.common.white,
           minWidth: 10,
           marginLeft: '25px',
           '&.Mui-selected': {
-            color: theme.palette.common.arcOrange,
+            borderBottom: '3px solid white',
           },
         }}
       />
@@ -38,7 +36,12 @@ const Navigation = () => {
   });
 
   return (
-    <Tabs value={value} onChange={tabChangeHandler}>
+    <Tabs
+      value={value}
+      onChange={tabChangeHandler}
+      textColor="white"
+      sx={{ marginLeft: 'auto' }}
+    >
       {NavigationTabs}
     </Tabs>
   );

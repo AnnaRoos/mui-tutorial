@@ -4,6 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 
 import Navigation from './Navigation';
+import CallToActionButton from './CallToActionButton';
 
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { styled } from '@mui/system';
@@ -49,6 +50,9 @@ const Header = () => {
               style={{ height: '7em' }}
             />
             <Navigation />
+            <CallToActionButton
+              position={{ marginLeft: '50px', marginRight: '25px' }}
+            />
           </Toolbar>
         </AppBar>
       </ElevationScroll>
