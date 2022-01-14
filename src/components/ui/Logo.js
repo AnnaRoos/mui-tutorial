@@ -10,14 +10,15 @@ const Logo = ({ navigationHandler }) => {
     <Button
       component={Link}
       to="/"
-      sx={{ padding: 0 }}
+      sx={{ padding: 0 /* '&:hover': { backgroundColor: 'transparent' } */ }}
       onClick={navigationHandler}
+      disableRipple
     >
       <img
         id="logo"
         src={logo}
         alt="Arc Development company logo"
-        style={{ height: '7em' }}
+        style={{ height: '8em' }}
       />
     </Button>
   );

@@ -7,12 +7,13 @@ import Tab from '@mui/material/Tab';
 import { pages } from '../../config/pageConfig';
 import { theme } from './Theme';
 
-const Navigation = ({ navigationHandler, value }) => {
+const Navigation = ({ navigationHandler, value, anchorEl }) => {
   const pageTabs = pages.slice(0, 5);
 
   const navigationTabs = pageTabs.map((page) => {
     return (
       <Tab
+        aria-owns={anchorEl ? 'services' : undefined}
         label={page.title}
         key={page.title}
         component={Link}
